@@ -20,6 +20,6 @@ steps:
     displayName: 'Run ESLint'
 
   - script: |
-      npm run prettier
+      npm run prettier -- --write
     displayName: 'Run Prettier'
 

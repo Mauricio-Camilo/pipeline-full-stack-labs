@@ -14,3 +14,6 @@ steps:
   - script: |
       npm install
     displayName: 'npm install'
+
+  - script: npm run lint
+    displayName: 'Run ESLint'

@@ -20,11 +20,11 @@ provider "azuredevops" {
   personal_access_token = var.azure_devops_token
 }
 
-resource "azurerm_resource_group" "app_rg" {
-  name     = "${var.app_name}-${var.app_env}-rg"
-  location = var.azure_region
+# resource "azurerm_resource_group" "app_rg" {
+#   name     = "${var.app_name}-${var.app_env}-rg"
+#   location = var.azure_region
 
-  tags = {
-    environment = "${var.app_env}"
-  }
-}
+#   tags = {
+#     environment = "${var.app_env}"
+#   }
+# }

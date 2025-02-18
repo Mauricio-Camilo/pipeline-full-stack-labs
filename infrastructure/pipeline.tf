@@ -32,7 +32,7 @@ resource "azuredevops_build_definition" "github" {
     repo_type             = "GitHubEnterprise"
     repo_id               = "${var.github_organization}/${var.github_repository}"
     github_enterprise_url = "https://github.com"
-    branch_name           = "refs/heads/dev"
+    branch_name           = "main"
     yml_path              = "azure-pipeline.yml"
     service_connection_id = azuredevops_serviceendpoint_github_enterprise.github.id
   }

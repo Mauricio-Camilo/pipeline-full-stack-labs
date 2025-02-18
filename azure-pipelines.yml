@@ -8,12 +8,18 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: '15.x'
+      versionSpec: '15.x' # Verificar versão do node no package.json
     displayName: 'Install Node.js'
 
   - script: |
       npm install
-    displayName: 'npm install'
+    displayName: 'npm install' 
 
-  - script: npm run lint
+  - script: |
+      npm run lint
     displayName: 'Run ESLint'
+
+  - script: |
+      npm run prettier
+    displayName: 'Run Prettier'
+

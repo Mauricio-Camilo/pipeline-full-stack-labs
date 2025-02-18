@@ -23,3 +23,6 @@ steps:
       npm run prettier -- --write
     displayName: 'Run Prettier'
 
+  - script: |
+      npm run test
+    displayName: 'Run Tests'

@@ -24,5 +24,5 @@ steps:
     displayName: 'Run Prettier'
 
   - script: |
-      npm run test --ci
+      npm run test --ci --no-watch
     displayName: 'Run Tests'

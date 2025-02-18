@@ -1,13 +1,14 @@
 trigger:
 - main
 
+# Agente de build, ou seja, uma VM provisionada para rodar os stages da pipeline
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: '18.x'
+      versionSpec: '15.x'
     displayName: 'Install Node.js'
 
   - script: |

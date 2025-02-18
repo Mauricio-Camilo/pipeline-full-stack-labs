@@ -17,7 +17,7 @@ provider "azurerm" {
 
 provider "azuredevops" {
   org_service_url       = "https://dev.azure.com/matchit-devops"
-  personal_access_token = data.azurerm_key_vault_secret.azure_devops_token.value
+  personal_access_token = var.azure_devops_token
 }
 
 resource "azurerm_resource_group" "app_rg" {

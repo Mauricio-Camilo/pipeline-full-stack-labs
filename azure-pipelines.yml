@@ -26,3 +26,7 @@ steps:
   - script: |
       CI=true npm run test
     displayName: 'Run Tests'
+
+  - script: |
+      npm run build
+    displayName: 'Run Build'

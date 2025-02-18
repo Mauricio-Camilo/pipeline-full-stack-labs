@@ -3,3 +3,4 @@ terraform*
 tf.local*
 tf.state*
 node_modules
+build

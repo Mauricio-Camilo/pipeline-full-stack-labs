@@ -24,6 +24,5 @@ steps:
     displayName: 'Run Prettier'
 
   - script: |
-      npm run test 
-      exit 0
+      CI=true npm run test
     displayName: 'Run Tests'

@@ -8,10 +8,9 @@
 #   registry_type         = "Others"
 # }
 
-resource "azuredevops_serviceendpoint_github_enterprise" "github" {
+resource "azuredevops_serviceendpoint_github" "github" {
   project_id            = var.devops_project_id
   service_endpoint_name = "${var.app_name}-${var.app_env}-Github-Connection"
-  url                   = "https://github.com/${var.github_organization}/${var.github_repository}"
   description           = "${var.app_name} Github Connection"
 
   auth_personal {
@@ -29,11 +28,11 @@ resource "azuredevops_build_definition" "github" {
   }
 
   repository {
-    repo_type             = "GitHubEnterprise"
+    repo_type             = "GitHub"
     repo_id               = "${var.github_organization}/${var.github_repository}"
     github_enterprise_url = "https://github.com"
     branch_name           = "main"
-    yml_path              = "azure-pipeline.yml"
-    service_connection_id = azuredevops_serviceendpoint_github_enterprise.github.id
+    yml_path              = "azure-pipelines.yml"
+    service_connection_id = azuredevops_serviceendpoint_github.github.id
   }
 }  

@@ -1,0 +1,16 @@
+name: Validate PR Source Branch
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR Source Branch
+        run: |
+          if [[ "${{ github.head_ref }}" != "devel" ]]; then
+            echo "Este PR deve ser criado a partir da branch 'features'."
+            exit 1
+          fi

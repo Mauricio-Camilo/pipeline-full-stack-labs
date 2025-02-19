@@ -4,3 +4,4 @@ tf.local*
 tf.state*
 node_modules
 build
+/infrastructure/variables.auto.tfvars

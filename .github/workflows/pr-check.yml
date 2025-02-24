@@ -11,6 +11,6 @@ jobs:
       - name: Check PR Source Branch
         run: |
           if [[ "${{ github.head_ref }}" != "devel" ]]; then
-            echo "Este PR deve ser criado a partir da branch 'features'."
+            echo "Este PR deve ser criado a partir da branch 'devel'."
             exit 1
           fi

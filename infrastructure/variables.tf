@@ -53,6 +53,8 @@ variable "github_repository" {
   type        = string
 }
 
+
+
 variable "github_token_connection" {
   description = "Github personal token to connect with Azure pipelines"
   type        = string

@@ -3,6 +3,8 @@ name: Validate PR Source Branch
 on:
   pull_request:
     types: [opened, synchronize]
+    branches:
+      - stage 
 
 jobs:
   check-branch:
